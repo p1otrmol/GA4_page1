@@ -1,0 +1,140 @@
+body
+{
+background-color: black;
+color: white;
+font-size: 20px;
+font-family: 'Times New Roman', Times, serif;
+}
+
+#container
+{
+width: 1000px;
+margin-left: auto;
+margin-right: auto;
+}
+
+.rectangle
+{
+width: 960px;
+margin: 20px;
+text-align: center;
+}
+
+#logo
+{
+float: left;
+width: 600px;
+font-size: 70px;
+text-align: left;
+font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+#zegar
+{
+float: left;
+font-family: Verdana, Geneva, Tahoma, sans-serif;
+font-size: 70px;
+
+}
+
+.square
+{
+width: 500px;
+float: left;
+color: #ffffff;
+font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.href-color
+{
+    color: #ffffff;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-decoration: none;
+}
+
+.tile1
+{
+margin: 10px;
+width: 230px;
+height: 142px;
+background-color: rgb(88, 169, 245);
+float: left;
+text-align: center; 
+}
+
+.tile2
+{
+margin: 10px;
+width: 230px;
+height: 142px;
+background-color: rgb(149, 174, 198);
+float: left;
+text-align: center
+}
+
+.tile3
+{
+margin: 10px;
+width: 230px;
+height: 142px;
+background-color: rgb(126, 236, 122);
+float: left;
+text-align: center
+}
+
+.tile4
+{
+margin: 10px;
+padding: 30px;
+width: 420px;
+height: 142px;
+background-color: rgb(245, 88, 117);
+float: left;
+text-align: center;
+}
+
+.tile5
+{
+margin: 10px;
+padding: 30px;
+width: 420px;
+height: 244px;
+background-color: rgb(149, 174, 198);
+text-align: justify;
+}
+
+.yt
+{
+    margin: 10px;
+    width: 105px;
+    height: 200px;
+    background-color: red;
+    float: left;
+}
+
+.fb
+{
+    margin: 10px;
+    width: 105px;
+    height: 200px;
+    background-color: rgb(40, 68, 246);
+    float: left;
+}
+
+.gplus
+{
+    margin: 10px;
+    width: 105px;
+    height: 200px;
+    background-color: rgb(255, 17, 0);
+    float: left;
+}
+
+.twitter
+{
+    margin: 10px;
+    width: 105px;
+    height: 200px;
+    background-color: rgb(84, 134, 241);
+    float: left;
+}
