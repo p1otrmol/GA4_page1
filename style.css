@@ -138,3 +138,22 @@ text-align: justify;
     background-color: rgb(84, 134, 241);
     float: left;
 }
+
+.buy-button {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    text-decoration: none;
+    color: #fff;
+    background-color: #007bff;
+    border: 2px solid #007bff;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+  }
+
+  .buy-button:hover {
+    background-color: #0056b3;
+    border-color: #0056b3;
+  }
