@@ -1,18 +1,5 @@
-window.dataLayer = window.dataLayer || [];
+        window.dataLayer = window.dataLayer || [];
     	function gtag(){dataLayer.push(arguments);}
-
-        function setConsent(consent) {
-            const consentMode = {
-                'functionality_storage': consent.necessary ? 'granted' : 'denied',
-                'security_storage': consent.necessary ? 'granted' : 'denied',
-                'ad_storage': consent.marketing ? 'granted' : 'denied',
-                'analytics_storage': consent.analytics ? 'granted' : 'denied',
-                'personalization': consent.preferences ? 'granted' : 'denied',
-            };
-            gtag('consent', 'update', consent);  
-            localStorage.setItem('consentMode', JSON.stringify(consentMode));
-            hideBanner();
-        }
 
         function hideBanner() {
             document.getElementById('cookieConsentBanner').style.display = 'none';
@@ -20,6 +7,10 @@ window.dataLayer = window.dataLayer || [];
 
         function initializeConsent() {
             if (localStorage.getItem('consentMode') === null) {
+                window.dataLayer.push({
+                    'event': 'gtm.init_consent',
+                    'gtm.uniqueEventId': -1
+                })
                 document.getElementById('btnAcceptAll').addEventListener('click', function () {
                     setConsent({
                         necessary: true,
@@ -46,4 +37,17 @@ window.dataLayer = window.dataLayer || [];
                 });
                 document.getElementById('cookieConsentBanner').style.display = 'block';
             }
+        }
+
+        function setConsent(consent) {
+            const consentMode = {
+                'functionality_storage': consent.necessary ? 'granted' : 'denied',
+                'security_storage': consent.necessary ? 'granted' : 'denied',
+                'ad_storage': consent.marketing ? 'granted' : 'denied',
+                'analytics_storage': consent.analytics ? 'granted' : 'denied',
+                'personalization': consent.preferences ? 'granted' : 'denied',
+            };
+            gtag('consent', 'update', consent);  
+            localStorage.setItem('consentMode', JSON.stringify(consentMode));
+            hideBanner();
         }
