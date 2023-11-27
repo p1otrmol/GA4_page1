@@ -1,12 +1,10 @@
 <!DOCTYPE HTML>
 <html lang="pl">
 <head>
+	<script src="/consent.js"></script>
+
 	<!-- Google Tag Manager -->
-<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-	new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-	j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-	'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-	})(window,document,'script','dataLayer','GTM-WHXBDBGG');</script>
+	<script src="/GTM.js"></script>
 	<!-- End Google Tag Manager -->
 	
 	<meta charset="utf-8" />
@@ -23,11 +21,35 @@
 	  </script>
 </head>
 
-<body>
+<body onload="initializeConsent()">
+	<div id="cookieConsentBanner" class="cookie-consent-banner" style="display: none;">
+		<p>
+			Ta strona używa plików cookie. Wybierz swoje preferencje dotyczące plików cookie:
+		</p>
+		<div>
+			<label>
+				<input id="consentNecessary" type="checkbox" value="necessary" checked>Pliki niezbędne
+			</label><br>
+			<label>
+				<input id="consentAnalytics" type="checkbox" value="analytics" checked>Pliki analityczne
+			</label><br>
+			<label>
+				<input id="consentPreferences" type="checkbox" value="preferences" checked>Pliki preferencji
+			</label><br>
+			<label>
+				<input id="consentMarketing" type="checkbox" value="marketing" checked>Pliki marketingowe
+			</label><br>
+		</div>
+		<button id="btnAcceptSelection">Zgoda na wybrane pliki cookie</button>
+		<button id="btnAcceptAll">Zgoda na wszystkie pliki cookie</button>
+		<button id="btnRejectAll">Odrzucenie wszystkich plików cookie</button>
+	</div>
+
 	<!-- Google Tag Manager (noscript) -->
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WHXBDBGG"
 	height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 	<!-- End Google Tag Manager (noscript) -->
+
 <div id="container">
 	<div class="rectangle">
 		<div id="logo">Piotr Mól</div>
