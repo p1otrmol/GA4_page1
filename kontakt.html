@@ -21,11 +21,11 @@
 	<meta name="keywords" content="Portfolio, Programista">		
 	<title>Współpraca Form</title>
 
-	<script>
+	<!-- <script>
 		function clearInput() {
 		  document.getElementById("emailInput").value = "";
 		}
-	  </script>
+	  </script> -->
 </head>
 
 <!-- <body onload="initializeConsent()"> -->
@@ -93,10 +93,10 @@
 	</div>
 	<div class="square">
 		<div class="tile5">
-			<form id="form2" class="e-mail_form">
+			<form id="form2" class="e-mail_form" action="/kontakt.html">
 				<label for="emailInput">Współpraca:</label>
 				<input type="email" id="emailInput" name="email">
-				<input type="submit" value="Zapisz" onclick="clearInput()">
+				<button type="submit">Submit</button>
 			  </form>
 			  
 		</div>
@@ -122,8 +122,8 @@
 	</div>
 	<div style="visibility: hidden;">a</div>
 </div>
-		<h1>Choose your role:</h1>
-    <form id="profile-form" action="/">
+<h1>Choose your role:</h1>
+    <form id="form3" action="/kontakt.html">
         <div class="form-group">
             <label for="exampleInputEmail1">Job Function</label>
             <select class="form-control" id="job-function" name="job-function">
@@ -135,7 +135,7 @@
             </select>
             <small>This example shows how to set user properties in Google Analytics.</small>
         </div>
-        <button type="submit" class="btn btn-primary">Submit</button>
+        <button type="submit">Submit</button>
     </form>
 </body>
 <footer>
